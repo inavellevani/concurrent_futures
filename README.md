@@ -1,1 +1,2 @@
-# concurrent_futures
+Concurrent Product Data Retrieval
+This Python script showcases concurrent processing to efficiently retrieve product data from a dummy API. Leveraging the concurrent.futures module, the script employs multi-threading for parallel URL fetching and aggregates results seamlessly. The collected data is then written to a 'output_data.json' file. A quick and effective solution for asynchronous data retrieval.# concurrent_futures
