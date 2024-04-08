@@ -2,6 +2,7 @@ import concurrent.futures
 import requests
 import json
 
+
 def get_url(url):
     try:
         response = requests.get(url)
@@ -11,10 +12,12 @@ def get_url(url):
     except Exception:
         return None
 
+
 def process_group(urlss):
     with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
         results = list(executor.map(get_url, urlss))
     return results
+
 
 def main():
     base_url = "https://dummyjson.com/products/"
@@ -34,6 +37,7 @@ def main():
         json.dump(all_results, json_file, indent=2)
 
     print("Done")
+
 
 if __name__ == '__main__':
     main()
